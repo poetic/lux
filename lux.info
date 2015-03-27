@@ -19,64 +19,6 @@ regions[page_top]       = 'Page top'
 regions[page_bottom]    = 'Page bottom'
 
 
-;;;;;;;;;;;;;;;;;;;;;
-;; Theme Settings
-;;;;;;;;;;;;;;;;;;;;;
-
-; Badges
-; --------------
-
-
-; Buttons
-; --------------
-
-
-; Cards
-; --------------
-
-
-; Collections
-; --------------
-
-
-; Footer
-; --------------
-
-
-; Forms
-; --------------
-
-
-; Icons
-; --------------
-
-
-; Navbar
-; --------------
-
-
-; Pagination
-; --------------
-
-
-; Preloader
-; --------------
-
-
-; Global
-; --------------
-
-
-;;;;;;;;;;;;;;;;;;;;;
-;; Excludes
-;;;;;;;;;;;;;;;;;;;;;
-
-; JavaScript
-; --------------
-
-
-; CSS
-; --------------
-
-
+scripts[] = js/bin/materialize.min.js
+stylesheets[all][] = css/materialize.css
 
