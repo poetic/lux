@@ -3,5 +3,6 @@ description = Drupal Materialize
 core = 7.x
 
 stylesheets[all][] = styles.css
+stylesheets[all][] = materialize.css
 
 regions[content]        = 'Content'
