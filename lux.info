@@ -2,4 +2,6 @@ name = Lux
 description = Drupal Materialize
 core = 7.x
 
+stylesheets[all][] = styles.css
+
 regions[content]        = 'Content'
