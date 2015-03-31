@@ -1,0 +1,5 @@
+name = Lux
+description = Drupal Materialize
+core = 7.x
+
+regions[content]        = 'Content'
