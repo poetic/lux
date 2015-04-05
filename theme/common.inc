@@ -203,6 +203,7 @@ function _lux_colorize_button($text) {
   foreach ($specific_strings as $class => $strings) {
     foreach ($strings as $string) {
       if (strpos(drupal_strtolower($text), drupal_strtolower($string)) !== FALSE) {
+        $class = $class . ' waves-effect waves-light';
         return $class;
       }
     }
@@ -211,6 +212,7 @@ function _lux_colorize_button($text) {
   foreach ($generic_strings as $class => $strings) {
     foreach ($strings as $string) {
       if (strpos(drupal_strtolower($text), drupal_strtolower($string)) !== FALSE) {
+        $class = $class . ' waves-effect waves-light';
         return $class;
       }
     }
