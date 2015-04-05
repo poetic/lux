@@ -151,14 +151,18 @@ function _lux_icon($name) {
 function _lux_colorize_button($text) {
   // Text values containing these specific strings, which are matched first.
   $specific_strings = array(
-    'btn-primary' => array(
+    'btn' => array(
       t('Download feature'),
+      t('Clear all caches'),
     ),
-    'btn-success' => array(
+    'btn light-blue' => array(
       t('Add effect'),
       t('Add and configure'),
     ),
-    'btn-info' => array(
+    'btn orange' => array(
+      t('View Changes'),
+    ),
+    'btn green' => array(
       t('Save and add'),
       t('Add another item'),
       t('Update style'),
@@ -166,28 +170,31 @@ function _lux_colorize_button($text) {
   );
   // Text values containing these generic strings, which are matches last.
   $generic_strings = array(
-    'btn-primary' => array(
+    'btn' => array(
       t('Save'),
       t('Confirm'),
       t('Submit'),
       t('Search'),
+      t('Execute'),
     ),
-    'btn-success' => array(
+    'btn light-blue' => array(
       t('Add'),
+      t('Preview'),
       t('Create'),
       t('Write'),
     ),
-    'btn-warning' => array(
+    'btn orange' => array(
       t('Export'),
       t('Import'),
       t('Restore'),
       t('Rebuild'),
+      t('Reset'),
     ),
-    'btn-info' => array(
+    'btn green' => array(
       t('Apply'),
       t('Update'),
     ),
-    'btn-danger' => array(
+    'btn red' => array(
       t('Delete'),
       t('Remove'),
     ),
