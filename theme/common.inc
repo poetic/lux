@@ -114,32 +114,6 @@ function lux_include($theme, $path) {
 }
 
 /**
- * Theme a Bootstrap Glyphicon.
- *
- * @param string $name
- *   The icon name, minus the "glyphicon-" prefix.
- *
- * @return string
- *   The icon HTML markup.
- */
-function _lux_icon($name) {
-  $output = '';
-  // Attempt to use the Icon API module, if enabled and it generates output.
-  if (module_exists('icon')) {
-    $output = theme('icon', array('bundle' => 'bootstrap', 'icon' => 'glyphicon-' . $name));
-  }
-  if (empty($output)) {
-    // Mimic the Icon API markup.
-    $attributes = array(
-      'class' => array('icon', 'glyphicon', 'glyphicon-' . $name),
-      'aria-hidden' => 'true',
-    );
-    $output = '<i' . drupal_attributes($attributes) . '></i>';
-  }
-  return $output;
-}
-
-/**
  * Colorize buttons based on the text value.
  *
  * @param string $text
@@ -220,63 +194,3 @@ function _lux_colorize_button($text) {
   return FALSE;
 }
 
-/**
- * Iconize buttons based on the text value.
- *
- * @param string $text
- *   Button text to search against.
- *
- * @return string
- *   The icon markup or FALSE if not matched.
- */
-function _lux_iconize_button($text) {
-  // Text values containing these specific strings, which are matched first.
-  $specific_strings = array();
-  // Text values containing these generic strings, which are matches last.
-  $generic_strings = array(
-    'cog' => array(
-      t('Manage'),
-      t('Configure'),
-    ),
-    'download' => array(
-      t('Download'),
-    ),
-    'export' => array(
-      t('Export'),
-    ),
-    'import' => array(
-      t('Import'),
-    ),
-    'pencil' => array(
-      t('Edit'),
-    ),
-    'plus' => array(
-      t('Add'),
-      t('Write'),
-    ),
-    'trash' => array(
-      t('Delete'),
-      t('Remove'),
-    ),
-    'upload' => array(
-      t('Upload'),
-    ),
-  );
-  // Specific matching first.
-  foreach ($specific_strings as $icon => $strings) {
-    foreach ($strings as $string) {
-      if (strpos(drupal_strtolower($text), drupal_strtolower($string)) !== FALSE) {
-        return _lux_icon($icon);
-      }
-    }
-  }
-  // Generic matching last.
-  foreach ($generic_strings as $icon => $strings) {
-    foreach ($strings as $string) {
-      if (strpos(drupal_strtolower($text), drupal_strtolower($string)) !== FALSE) {
-        return _lux_icon($icon);
-      }
-    }
-  }
-  return FALSE;
-}
