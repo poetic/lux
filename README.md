@@ -10,4 +10,4 @@ http://materializecss.com/
 
 ## Showcase
 
-Spin up a site with Lux using [Lux Playground](https://github.com/poetic/lux.git)
+Spin up a site with Lux using [Lux Playground](https://github.com/poetic/lux-playground.git)
