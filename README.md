@@ -8,3 +8,6 @@ Created and designed by Google, Material Design is a design language that combin
 
 http://materializecss.com/
 
+## Showcase
+
+Spin up a site with Lux using [Lux Playground](https://github.com/poetic/lux.git)
