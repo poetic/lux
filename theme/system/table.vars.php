@@ -12,7 +12,7 @@ function lux_preprocess_table(&$variables) {
     // Convert classes to an array.
     $variables['attributes']['class'] = explode(' ', $variables['attributes']['class']);
   }
-  $variables['attributes']['class'][] = 'table';
+  $variables['attributes']['class'][] = 'hoverable responsive';
   if (!in_array('table-no-striping', $variables['attributes']['class'])) {
     $variables['attributes']['class'][] = 'table-striped';
   }
