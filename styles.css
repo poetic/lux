@@ -1,10 +1,21 @@
-/*Overrides*/
+/* Overrides */
 
 .btn {
 	margin: 0 10px 0 0;
 }
 
-/*Band-aids for growing pains, will be removed as project matures*/
+/* Prefix/Suffix CSS overrides */
+form input,
+form select,
+form textarea {
+  width: auto !important;
+}
+.field-prefix + input[type="text"],
+.field-suffix + input[type="text"] {
+  text-align: center;
+}
+
+/* Band-aids for growing pains, will be removed as project matures */
 form select {
 	display: inline-block;
 }

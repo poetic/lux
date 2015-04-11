@@ -6,7 +6,7 @@ scripts[] = js/materialize.min.js
 scripts[] = js/lux.settings.js
 
 stylesheets[all][] = styles.css
-stylesheets[all][] = materialize.css
+stylesheets[all][] = materialize.min.css
 
 regions[header] = Header
 regions[highlighted] = Highlighted
