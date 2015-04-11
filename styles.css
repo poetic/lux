@@ -6,13 +6,20 @@
 
 /* Prefix/Suffix CSS overrides */
 form input,
-form select,
-form textarea {
+form select {
   width: auto !important;
 }
 .field-prefix + input[type="text"],
 .field-suffix + input[type="text"] {
   text-align: center;
+}
+
+/* Textarea Grippie overrides */
+textarea {
+  margin-bottom: 0 !important;
+}
+textarea:focus + .grippie {
+  margin-top: 1px;
 }
 
 /* Band-aids for growing pains, will be removed as project matures */
