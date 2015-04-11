@@ -1,12 +1,21 @@
-/*Layout*/
-#main {
-	max-width: 1200px;
-	margin: 0 auto;
-}
 /*Overrides*/
+
+.btn {
+	margin: 0 10px 0 0;
+}
+
+/*Band-aids for growing pains, will be removed as project matures*/
 form select {
 	display: inline-block;
 }
-.btn {
-	margin: 0 10px 0 0;
+#page-wrapper {
+	overflow-x: hidden;
+}
+#main {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+table.lighten-3 th {
+	color: #fff;
 }
