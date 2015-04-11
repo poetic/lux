@@ -11,11 +11,11 @@ form select {
 #page-wrapper {
 	overflow-x: hidden;
 }
-#main {
+#page {
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 20px;
 }
-table.lighten-3 th {
-	color: #fff;
+table th, table td {
+	padding: 15px 20px;
 }
