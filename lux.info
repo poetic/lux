@@ -5,8 +5,8 @@ core = 7.x
 scripts[] = js/materialize.min.js
 scripts[] = js/lux.settings.js
 
-stylesheets[all][] = styles.css
-stylesheets[all][] = materialize.min.css
+stylesheets[all][] = css/styles.css
+stylesheets[all][] = css/materialize.min.css
 
 regions[header] = Header
 regions[highlighted] = Highlighted

@@ -35,4 +35,12 @@ function lux_form_system_theme_settings_alter(&$form, $form_state, $form_id = NU
     )),
     '#weight' => 0,
   );
+
+  $form['lux_toggle_selection'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Use toggle switches instead of checkboxes'),
+    '#default_value' => theme_get_setting('lux_toggle_selection'),
+    '#description' => t('Use toggle switches instead of checkboxes (description)'),
+    '#weight' => 0,
+  );
 }

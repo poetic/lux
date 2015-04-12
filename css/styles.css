@@ -22,6 +22,22 @@ textarea:focus + .grippie {
   margin-top: 1px;
 }
 
+/* File field CSS overrides*/
+.file-field input[type="file"] {
+  width: 91px !important;
+}
+.file-field button.btn {
+  position: static;
+  float: none;
+  margin: 0 0 0 10px;
+}
+.file-path button[value="Remove"] {
+  width: 0px !important;
+}
+.file-size ~ .validate {
+  display: none;
+}
+
 /* Band-aids for growing pains, will be removed as project matures */
 form select {
 	display: inline-block;
@@ -36,4 +52,15 @@ form select {
 }
 table th, table td {
 	padding: 15px 20px;
+}
+
+.ajax-progress {
+  margin-left: 10px;
+  vertical-align: middle;
+}
+.ajax-progress .throbber {
+  background-image: url(../images/loading.gif);
+  background-size: 32px;
+  width: 32px;
+  height: 32px;
 }
