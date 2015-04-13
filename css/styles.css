@@ -64,3 +64,26 @@ table th, table td {
   width: 32px;
   height: 32px;
 }
+
+/* Node Edit Tabs Overrides */
+.tabs.primary,
+.tabs.secondary {
+  margin: 0;
+  padding: 0 !important;
+  border: none !important;
+}
+.tabs.primary a,
+.tabs.secondary a {
+  padding: 0 !important;
+  background: none !important;
+  color: #009688 !important;
+  border: 0 !important;
+  border-bottom: 2px solid #e0f2f1 !important;
+}
+.tabs.primary .tab,
+.tabs.secondary .tab {
+  width: 10% !important;
+}
+.tabs .indicator {
+  background: #80cbc4 !important;
+}
