@@ -1,8 +1,8 @@
 (function(window, document, $){
 	$(document).ready(function() {
 
-    // Enable Materialize select
-		$('select').material_select();
+    // Enable Materialize select(Not functioning correctly at the moment)
+		// $('select').material_select();
 
     // File Input Path
     $('.file-field').each(function() {
