@@ -87,3 +87,6 @@ table th, table td {
 .tabs .indicator {
   background: #80cbc4 !important;
 }
+.form-textarea-wrapper {
+  border: 1px solid #bdbdbd;
+}
