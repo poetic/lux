@@ -23,7 +23,6 @@ function lux_form_system_theme_settings_alter(&$form, $form_state, $form_id = NU
   if (isset($form_id)) {
     return;
   }
-
   // Rebuild registry.
   $form['lux_rebuild_registry'] = array(
     '#type' => 'checkbox',
@@ -42,5 +41,10 @@ function lux_form_system_theme_settings_alter(&$form, $form_state, $form_id = NU
     '#default_value' => theme_get_setting('lux_toggle_selection'),
     '#description' => t('Use toggle switches instead of checkboxes (description)'),
     '#weight' => 0,
+  );
+  $form['theme_settings']['toggle_secondary_menu'] = array(
+    '#type' =>  'checkbox',
+    '#title'  =>  t('Secondary Menu'),
+    '#default_value'  => 0
   );
 }
