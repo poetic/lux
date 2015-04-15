@@ -15,3 +15,12 @@ regions[content] = Content
 regions[sidebar_first] = Left sidebar
 regions[sidebar_second] = Right sidebar
 regions[footer] = Footer
+
+features[] = logo
+features[] = name
+features[] = slogan
+features[] = node_user_picture
+features[] = comment_user_picture
+features[] = comment_user_verification
+features[] = favicon
+features[] = main_menu

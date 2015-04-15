@@ -42,9 +42,4 @@ function lux_form_system_theme_settings_alter(&$form, $form_state, $form_id = NU
     '#description' => t('Use toggle switches instead of checkboxes (description)'),
     '#weight' => 0,
   );
-  $form['theme_settings']['toggle_secondary_menu'] = array(
-    '#type' =>  'checkbox',
-    '#title'  =>  t('Secondary Menu'),
-    '#default_value'  => 0
-  );
 }
