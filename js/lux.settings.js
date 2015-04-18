@@ -1,9 +1,12 @@
 (function(window, document, $){
 	$(document).ready(function() {
 
-    //Enable Materialize select(Not functioning correctly at the moment)
+    //Enable Materialize select
 		$('select').material_select();
-
+    //Enable Materialize Accordion
+    $('.collapsible').collapsible({
+      accordion : false
+    });
     // File Input Path
     $('.file-field').each(function() {
       var path_input = $(this).find('input.file-path');

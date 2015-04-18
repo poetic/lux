@@ -226,11 +226,6 @@ function lux_menu_local_task($variables) {
   return '<li class="tab s3" >' . l($link_text, $link ['href'], $link ['localized_options']) . "</li>\n";
 }
 
-
-
-
-
-
 function lux_menu_local_tasks(&$variables) {
   $output = '';
   if (!empty($variables ['primary'])) {
@@ -245,5 +240,28 @@ function lux_menu_local_tasks(&$variables) {
     $variables['secondary']['#suffix'] = '</ul>';
     $output .= drupal_render($variables['secondary']);
   }
+  return $output;
+}
+//Fieldset
+function lux_fieldset($variables) {
+  $element = $variables ['element'];
+  element_set_attributes($element, array('id'));
+  _form_set_class($element, array('form-wrapper collapsible'));
+
+  $output = '<fieldset' . drupal_attributes($element ['#attributes']) . 'data-attribute="expanded"' . '>';
+  if (!empty($element ['#title'])) {
+    // Always wrap fieldset legends in a SPAN for CSS positioning.
+    $output .= '<legend><span class="fieldset-legend">' . $element ['#title'] . '</span></legend>';
+  }
+  $output .= '<div class="fieldset-wrapper">';
+  if (!empty($element ['#description'])) {
+    $output .= '<div class="fieldset-description">' . $element ['#description'] . '</div>';
+  }
+  $output .= $element ['#children'];
+  if (isset($element ['#value'])) {
+    $output .= $element ['#value'];
+  }
+  $output .= '</div>';
+  $output .= "</fieldset>\n";
   return $output;
 }

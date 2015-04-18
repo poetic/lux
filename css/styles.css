@@ -89,3 +89,10 @@ table th, table td {
 .form-textarea-wrapper {
   border: 1px solid #bdbdbd;
 }
+/* Accordion - Features Override */
+fieldset.features-export-component.collapsible {
+  background: #fff !important;
+}
+#features-filter fieldset {
+  padding: 0 10px !important;
+}
