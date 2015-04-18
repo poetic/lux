@@ -24,3 +24,5 @@ features[] = comment_user_picture
 features[] = comment_user_verification
 features[] = favicon
 features[] = main_menu
+
+dependencies[] = jquery_update

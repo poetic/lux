@@ -8,6 +8,10 @@ Created and designed by Google, Material Design is a design language that combin
 
 http://materializecss.com/
 
+## Dependencies
+
+[jQuery Update](https://www.drupal.org/project/jquery_update) with jQuery version set to 1.10.x or above.
+
 ## Showcase
 
 Spin up a site with Lux using [Lux Playground](https://github.com/poetic/lux-playground-content)
