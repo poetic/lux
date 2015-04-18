@@ -96,3 +96,19 @@ fieldset.features-export-component.collapsible {
 #features-filter fieldset {
   padding: 0 10px !important;
 }
+/* Pager */
+.pager-wrap {
+  max-width: 725px;
+  margin: 0 auto;
+}
+.prev.first {
+  margin-right: 30px;
+}
+.clearafter:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+a.feed-icon {
+  display: none;
+}
