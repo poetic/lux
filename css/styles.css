@@ -4,9 +4,11 @@
 	margin: 0 10px 0 0;
 }
 
-/* Prefix/Suffix CSS overrides */
-form input,
 form select {
+  display: none;
+}
+/* Prefix/Suffix CSS overrides */
+form input {
   width: auto !important;
 }
 .field-prefix + input[type="text"],
@@ -39,9 +41,6 @@ textarea:focus + .grippie {
 }
 
 /* Band-aids for growing pains, will be removed as project matures */
-form select {
-	display: inline-block;
-}
 #page-wrapper {
 	overflow-x: hidden;
 }
