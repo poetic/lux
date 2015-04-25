@@ -112,3 +112,10 @@ fieldset.features-export-component.collapsible {
 a.feed-icon {
   display: none;
 }
+/* Status Messages */
+.alert {
+  color: #fff;
+}
+.alert a {
+  color: #bbdefb;
+}
