@@ -19,6 +19,7 @@ function lux_container($variables) {
     // Add classes.
     $element['#attributes']['class'][] = 'form-wrapper';
     $element['#attributes']['class'][] = 'form-group';
+    $element['#attributes']['class'][] = 'container';
   }
 
   return '<div' . drupal_attributes($element['#attributes']) . '>' . $element['#children'] . '</div>';
