@@ -77,7 +77,22 @@
   <div id="page-wrapper"><div id="page">
  
     <div id="header"><div class="section clearfix">
-
+      <nav>
+        <div id="navigation" class="nav-wrapper wrapper">
+          <?php if ($logo): ?>
+            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo" class="brand-logo">
+              <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+            </a>
+          <?php endif; ?>
+          <?php if ($main_menu || $secondary_menu): ?>
+            <div class="nav-section">
+              <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'nav-mobile', 'class' => array('links', 'inline', 'clearfix', 'right', 'hide-on-med-and-down')), 'heading' => t(''))); ?>
+              <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('links', 'inline', 'clearfix')), 'heading' => t('Secondary menu'))); ?>
+            </div>
+          <?php endif; ?>
+        </div>
+      </nav> <!-- /.nav-section, /#navigation /nav-->
+      
       <?php if ($site_name || $site_slogan): ?>
         <div id="name-and-slogan">
           <?php if ($site_name): ?>
@@ -101,22 +116,6 @@
       <?php print render($page['header']); ?>
 
     </div></div> <!-- /.section, /#header -->
-
-      <nav>
-        <div id="navigation" class="nav-wrapper wrapper">
-          <?php if ($logo): ?>
-            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo" class="brand-logo">
-              <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-            </a>
-          <?php endif; ?>
-          <?php if ($main_menu || $secondary_menu): ?>
-            <div class="nav-section">
-              <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'nav-mobile', 'class' => array('links', 'inline', 'clearfix', 'right', 'hide-on-med-and-down')), 'heading' => t(''))); ?>
-              <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('links', 'inline', 'clearfix')), 'heading' => t('Secondary menu'))); ?>
-            </div>
-          <?php endif; ?>
-        </div>
-      </nav> <!-- /.nav-section, /#navigation /nav-->
 
     <?php if ($breadcrumb): ?>
       <div id="breadcrumb"><?php print $breadcrumb; ?></div>
