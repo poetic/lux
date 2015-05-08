@@ -64,17 +64,18 @@
  * - $page['header']: Items for the header region.
  * - $page['footer']: Items for the footer region.
  *
+ * @see lux_preprocess_page()
  * @see template_preprocess()
  * @see template_preprocess_page()
+ * @see lux_process_page()
  * @see template_process()
  * @see html.tpl.php
  *
  * @ingroup themeable
  */
 ?>
-
   <div id="page-wrapper"><div id="page">
-
+ 
     <div id="header"><div class="section clearfix">
 
       <?php if ($logo): ?>
@@ -108,12 +109,11 @@
     </div></div> <!-- /.section, /#header -->
 
     <?php if ($main_menu || $secondary_menu): ?>
-      <div id="navigation"><div class="section">
-        <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'inline', 'clearfix')), 'heading' => t('Main menu'))); ?>
+      <nav><div id="navigation" class="nav-wrapper"><div class="nav-section">
+        <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'inline', 'clearfix')), 'heading' => t(''))); ?>
         <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('links', 'inline', 'clearfix')), 'heading' => t('Secondary menu'))); ?>
-      </div></div> <!-- /.section, /#navigation -->
+      </div></div></nav> <!-- /.nav-section, /#navigation /nav-->
     <?php endif; ?>
-
     <?php if ($breadcrumb): ?>
       <div id="breadcrumb"><?php print $breadcrumb; ?></div>
     <?php endif; ?>

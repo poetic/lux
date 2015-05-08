@@ -8,6 +8,7 @@ scripts[] = js/lux.settings.js
 stylesheets[all][] = css/styles.css
 stylesheets[all][] = css/materialize.min.css
 
+regions[navigation] = Navigation
 regions[header] = Header
 regions[highlighted] = Highlighted
 regions[help] = Help
