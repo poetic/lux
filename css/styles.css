@@ -41,6 +41,10 @@ textarea:focus + .grippie {
 }
 
 /* Band-aids for growing pains, will be removed as project matures */
+.wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+}
 #page-wrapper {
 	overflow-x: hidden;
 }
