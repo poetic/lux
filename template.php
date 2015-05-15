@@ -183,22 +183,60 @@ function lux_find_theme_includes($registry, $extension, $path) {
 function lux_fieldset($variables) {
   $element = $variables ['element'];
   element_set_attributes($element, array('id'));
-  _form_set_class($element, array('form-wrapper collapsible'));
+  _form_set_class($element, array('form-wrapper collapsible popout'));
+  dpm($element);
 
-  $output = '<fieldset' . drupal_attributes($element ['#attributes']) . 'data-attribute="expanded"' . '>';
+  // $output = '<fieldset' . drupal_attributes($element ['#attributes']) . 'data-attribute="expanded"' . '>';
+  // if (!empty($element ['#title'])) {
+  //   // Always wrap fieldset legends in a SPAN for CSS positioning.
+  //   $output .= '<legend><span class="fieldset-legend">' . $element ['#title'] . '</span></legend>';
+  // }
+  // $output .= '<div class="fieldset-wrapper">';
+  // if (!empty($element ['#description'])) {
+  //   $output .= '<div class="fieldset-description">' . $element ['#description'] . '</div>';
+  // }
+  // $output .= $element ['#children'];
+  // if (isset($element ['#value'])) {
+  //   $output .= $element ['#value'];
+  // }
+  // $output .= '</div>';
+  // $output .= "</fieldset>\n";
+
+  $output = '<ul' . drupal_attributes($element['#attributes']) . 'data-collapsible="expandable"' . '>';
+  $output .= '<li>';
+
   if (!empty($element ['#title'])) {
     // Always wrap fieldset legends in a SPAN for CSS positioning.
-    $output .= '<legend><span class="fieldset-legend">' . $element ['#title'] . '</span></legend>';
+    $output .= '<div class="collapsible-header"><i class="mdi-image-filter-drama"></i>'  . $element ['#title'] . '</div>';
   }
-  $output .= '<div class="fieldset-wrapper">';
+
+  $output .= '<div class="collapsible-body">';
   if (!empty($element ['#description'])) {
     $output .= '<div class="fieldset-description">' . $element ['#description'] . '</div>';
   }
   $output .= $element ['#children'];
+
   if (isset($element ['#value'])) {
     $output .= $element ['#value'];
   }
   $output .= '</div>';
-  $output .= "</fieldset>\n";
+  $output .= "</ul>\n";
+  // $output .= '                <li>
+  //                 <div class="collapsible-header"><i class="mdi-image-filter-drama"></i>First</div>
+  //                 <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+  //               </li>
+  //               <li>
+  //                 <div class="collapsible-header"><i class="mdi-image-filter-drama"></i>First</div>
+  //                 <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+  //               </li>
+  //               <li>
+  //                 <div class="collapsible-header"><i class="mdi-image-filter-drama"></i>First</div>
+  //                 <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+  //               </li>
+  //               <li>
+  //                 <div class="collapsible-header"><i class="mdi-image-filter-drama"></i>First</div>
+  //                 <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+  //               </li>';
+  // $output .= '</ul>';
   return $output;
 }
