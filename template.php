@@ -184,7 +184,6 @@ function lux_fieldset($variables) {
   $element = $variables ['element'];
   element_set_attributes($element, array('id'));
   _form_set_class($element, array('form-wrapper collapsible popout'));
-  dpm($element);
 
   // $output = '<fieldset' . drupal_attributes($element ['#attributes']) . 'data-attribute="expanded"' . '>';
   // if (!empty($element ['#title'])) {
