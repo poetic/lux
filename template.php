@@ -206,7 +206,7 @@ function lux_fieldset($variables) {
 
   if (!empty($element ['#title'])) {
     // Always wrap fieldset legends in a SPAN for CSS positioning.
-    $output .= '<div class="collapsible-header"><i class="mdi-image-filter-drama"></i>'  . $element ['#title'] . '</div>';
+    $output .= '<div class="collapsible-header active"><i class="mdi-image-filter-drama"></i>'  . $element ['#title'] . '</div>';
   }
 
   $output .= '<div class="collapsible-body">';

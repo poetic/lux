@@ -1,7 +1,7 @@
 /* Overrides */
 
 .btn {
-	margin: 0 10px 0 0;
+  margin: 0 10px 0 0;
 }
 
 form select {
@@ -39,22 +39,25 @@ textarea:focus + .grippie {
 .file-size ~ .validate {
   display: none;
 }
-
+/*Fieldset overrides*/
+.collapsible-body {
+  padding: 10px 20px;
+}
 /* Band-aids for growing pains, will be removed as project matures */
 .wrapper {
   max-width: 1024px;
   margin: 0 auto;
 }
 #page-wrapper {
-	overflow-x: hidden;
+  overflow-x: hidden;
 }
 #page {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 table th, table td {
-	padding: 15px 20px;
+  padding: 15px 20px;
 }
 
 .ajax-progress {
@@ -100,6 +103,10 @@ fieldset.features-export-component.collapsible {
 #features-filter fieldset {
   padding: 0 10px !important;
 }
+.container-inline div.collapsible-header {
+  vertical-align: bottom;
+  display: block;
+}
 /* Pager */
 .pager-wrap {
   max-width: 725px;
@@ -123,3 +130,5 @@ a.feed-icon {
 .alert a {
   color: #bbdefb;
 }
+
+
