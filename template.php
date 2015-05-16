@@ -202,7 +202,7 @@ function lux_fieldset($variables) {
   // $output .= "</fieldset>\n";
 
   $output = '<ul' . drupal_attributes($element['#attributes']) . 'data-collapsible="expandable"' . '>';
-  $output .= '<li>';
+  $output .= '<li class="active">';
 
   if (!empty($element ['#title'])) {
     // Always wrap fieldset legends in a SPAN for CSS positioning.
