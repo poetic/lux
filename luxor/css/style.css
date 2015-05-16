@@ -1,0 +1,223 @@
+/* aegir specific styling from Eldir
+/**
+ * AEGIR-SPECIFIC =====================================================
+ */
+div#hosting-wizard-form,
+div.error,
+div.message { width:auto; }
+
+#hosting-task-log { clear:both; }
+
+table,
+table.hosting-table {
+  font-size:11px;
+  width:100%;
+  }
+
+table,
+table tr,
+table td,
+table th,
+table thead,
+table body,
+table.hosting-table,
+table.hosting-table tr,
+table.hosting-table td,
+table.hosting-table th,
+table.hosting-table thead,
+table.hosting-table tbody {
+  border:0px;
+  padding:0px;
+  }
+
+table th,
+table td,
+table.hosting-table th,
+table.hosting-table td {
+  padding:4px 5px 5px;
+  border-top:1px solid #fff;
+  }
+
+.modalframe .ui-dialog-titlebar,
+table th,
+table.hosting-table th {
+  font-size:11px;
+  background:#666 !important;
+  }
+
+ table th.active,
+ table.hosting-table th.active { background:#555 !important; }
+
+ table th,
+ table th a { color:#fff; }
+
+ table tr.even td { background-color:#fcfcfc; }
+ table tr.odd td { background-color:#f8f8f8; }
+
+#hosting-wizard-account-details,
+#hosting-wizard-account-passwd {
+  float:none;
+  width:auto;
+  padding:0px;
+  }
+
+/* Node info */
+#hosting-task-list {
+  width:290px;
+  float:right;
+}
+
+#hosting-server-info,
+#hosting-platform-info,
+#hosting-package-info,
+#hosting-site-info,
+#hosting-task-info,
+#hosting-site-edit-info {
+  font-size:11px;
+  background:#f8f8f8;
+  float:left;
+  padding:9px;
+  border:1px solid #e8e8e8;
+  margin:0px 0px 10px;
+  width:280px;
+  }
+
+table.views-table { clear: both }
+
+  #hosting-site-edit-info,
+  #hosting-site-edit-info div.form-item {
+    float:none;
+    width:auto;
+    }
+
+  #hosting-site-edit-info div.form-item,
+  body.ntype-task #page div.node div#hosting-task-info div.form-item,
+  body.aegir #page div.node div.content div.form-item {
+    float:none;
+    position:relative;
+    margin:0px;
+    padding:5px 5px 4px 100px;
+    border-bottom:1px solid #e8e8e8;
+    }
+
+    #hosting-site-edit-info div.form-item:last-child,
+    body.ntype-task #page div.node div#hosting-task-info div.form-item:last-child,
+    body.aegir #page div.node div.content div.form-item:last-child {
+      border:0px;
+      padding-bottom:5px;
+      }
+
+  body.aegir #page div.node div.content div.form-item label {
+    position:absolute;
+    left:0px;
+    width:95px;
+    white-space:nowrap;
+    overflow:hidden;
+    font-size:9px;
+    display:block;
+    }
+
+  /* Exceptions */
+  body.ntype-task #page div.node div.content div.form-item, /* This exception sucks */
+  body.aegir #page #hosting-site-list div.form-item,
+  body.aegir #page #hosting-task-list div.form-item {
+    position:static;
+    float:none;
+    display:block;
+    margin:0px;
+    padding:0px;
+    }
+
+/* Forms */
+.hosting-queue-frequency,
+.hosting-queue-frequency-head {
+  text-align:left;
+  padding-right:inherit;
+  }
+
+div.hosting-queue-frequency {
+  font-size:10px;
+  text-align:left;
+  white-space:nowrap;
+  }
+
+div.hosting-queue-frequency input,
+div.hosting-queue-frequency select {
+  padding:2px;
+  font-size:10px;
+  }
+
+#edit-tasks-frequency-items-wrapper {
+    float: left;
+    margin: 0 0 5px 0;
+}
+
+#edit-cron-frequency-ticks-wrapper input,
+#edit-tasks-frequency-items-wrapper input,
+#edit-tasks-frequency-ticks-wrapper input {
+    width: 3em;
+    margin: 0 5px 0 0;
+}
+
+#edit-cron-frequency-ticks-wrapper {
+    float: left;
+}
+
+#edit-tasks-frequency-ticks-wrapper {
+    float: left;
+    clear: both;
+}
+
+#edit-tasks-frequency-unit-wrapper,
+#edit-cron-frequency-unit-wrapper {
+    float: left;
+}
+
+/* Keep labels from being truncated */
+body.aegir #page div.node div.content div.form-item label {
+  width: auto;
+}
+
+body.aegir #page div.node div.content div.form-radios div.form-item,
+body.aegir #page div.node div.content div.form-checkboxes div.form-item,
+body.aegir #page div.node div.content div.form-option {
+  border-bottom: none;
+  padding-bottom: 1.5em;
+}
+
+/* Task buttons */
+a.hosting-button-enabled,
+.hosting-button-disabled {
+  margin: 0 4px;
+  text-align: center;
+  height: 20px;
+  width : 4em;
+
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+
+  -moz-border-radius:3px;
+  -webkit-border-radius: 3px;
+}
+
+a.hosting-button-enabled:hover {
+  background: #49a
+}
+
+a.hosting-button-enabled {
+  color:#fff;
+  background:#6ac;
+}
+
+.hosting-button-disabled {
+  color:#eee;
+  background:#aaa;
+}
+
+a.hosting-button-stop {
+  background-color:#e66;
+}
+
+a.hosting-button-stop:hover {
+  background-color:#c44;
+}
