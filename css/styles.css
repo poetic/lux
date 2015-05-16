@@ -3,9 +3,11 @@
 .btn {
   margin: 0 10px 0 0;
 }
-
 form select {
   display: none;
+}
+.select-dropdown.dropdown-content li>a, .select-dropdown.dropdown-content li>span {
+  font-size: 12px;
 }
 /* Nav elements overrides */
 #logo img {
