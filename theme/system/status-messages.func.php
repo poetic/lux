@@ -18,12 +18,11 @@ function lux_status_messages($variables) {
     'info' => t('Informative message'),
   );
 
-  // Map Drupal message types to their corresponding Bootstrap classes.
-  // @see http://twitter.github.com/bootstrap/components.html#alerts
+  // Map Drupal message types to respective materialize classes
   $status_class = array(
-    'status' => 'success green lighten-1',
-    'error' => 'danger red lighten-1',
-    'warning' => 'warning yellow darken-1',
+    'status' => 'success green lighten-2',
+    'error' => 'danger red lighten-2',
+    'warning' => 'warning blue lighten-2',
     // Not supported, but in theory a module could send any type of message.
     // @see drupal_set_message()
     // @see theme_status_messages()

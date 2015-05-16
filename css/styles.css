@@ -104,7 +104,6 @@ fieldset.features-export-component.collapsible {
   padding: 0 10px !important;
 }
 .container-inline div.collapsible-header {
-  vertical-align: bottom;
   display: block;
 }
 /* Pager */
