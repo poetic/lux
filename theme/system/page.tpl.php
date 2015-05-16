@@ -75,7 +75,7 @@
  */
 ?>
   <div id="page-wrapper"><div id="page">
- 
+
     <div id="header"><div class="section clearfix">
       <nav>
         <div id="navigation" class="nav-wrapper wrapper">
@@ -84,6 +84,27 @@
               <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
             </a>
           <?php endif; ?>
+          <?php if ($site_name || $site_slogan): ?>
+            <div id="name-and-slogan">
+              <?php if ($site_name): ?>
+              <?php if ($title): ?>
+                <div id="site-name"><strong>
+                  <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
+                </strong></div>
+                <?php else: /* Use h5 when the content title is empty */ ?>
+                  <h5 id="site-name">
+                    <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
+                  </h5>
+                <?php endif; ?>
+              <?php endif; ?>
+
+              <?php if ($site_slogan): ?>
+                <div id="site-slogan"><?php print $site_slogan; ?></div>
+              <?php endif; ?>
+              </div> <!-- /#name-and-slogan -->
+          <?php endif; ?>
+
+
           <?php if ($main_menu || $secondary_menu): ?>
             <div class="nav-section">
               <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'nav-mobile', 'class' => array('links', 'inline', 'clearfix', 'right', 'hide-on-med-and-down')), 'heading' => t(''))); ?>
@@ -92,28 +113,7 @@
           <?php endif; ?>
         </div>
       </nav> <!-- /.nav-section, /#navigation /nav-->
-      
-      <?php if ($site_name || $site_slogan): ?>
-        <div id="name-and-slogan">
-          <?php if ($site_name): ?>
-            <?php if ($title): ?>
-              <div id="site-name"><strong>
-                <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-              </strong></div>
-            <?php else: /* Use h5 when the content title is empty */ ?>
-              <h5 id="site-name">
-                <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-              </h5>
-            <?php endif; ?>
-          <?php endif; ?>
-
-          <?php if ($site_slogan): ?>
-            <div id="site-slogan"><?php print $site_slogan; ?></div>
-          <?php endif; ?>
-        </div> <!-- /#name-and-slogan -->
-      <?php endif; ?>
-
-      <?php print render($page['header']); ?>
+           <?php print render($page['header']); ?>
 
     </div></div> <!-- /.section, /#header -->
 

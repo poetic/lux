@@ -7,6 +7,17 @@
 form select {
   display: none;
 }
+/* Nav elements overrides */
+#logo img {
+  vertical-align: middle;
+}
+#name-and-slogan {
+  display: inline-block;
+  margin: 0 7%;
+}
+.nav-section {
+  display: inline;
+}
 /* Prefix/Suffix CSS overrides */
 form input {
   width: auto !important;
