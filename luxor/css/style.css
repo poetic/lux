@@ -45,12 +45,9 @@ p, blockquote {
   background-image:none;
   background-color:transparent;
 
-  font-size:1em;
-  font-weight:normal;
-
   margin:0px;
   padding:0px;
-  }
+}
 
 ul, ol,
 .item-list ul, .item-list ol {
@@ -66,10 +63,6 @@ html, body {
   height: 100%;
 }
 
-body {
-  font: 13px/20px "Helvetica Neue",Arial,sans-serif;
-}
-
 body.aegir {
   color:#444;
   background:#fff;
@@ -81,6 +74,7 @@ body.aegir {
 a {
   color:#468;
   text-decoration:none;
+  font-weight: 300;
   }
 
   a:hover { text-decoration:underline; }
@@ -91,7 +85,7 @@ a {
 
   /* Reverse color text/links */
   div.reverse { color:#fff; }
-  div.reverse a { color:#ace; }
+  div.reverse a { color:#fff; }
 
 h1, h2 {
   font-size:15px;
@@ -160,7 +154,7 @@ div#console div.messages ul li { list-style: square; }
  * HEADER =============================================================
  */
 div#header {
-  background:url(images/sprite.png) repeat-x;
+  background:#0277bd;
   }
 
 div#header div.logo,
@@ -175,12 +169,13 @@ div#header div.site-name { float:left; }
 
 div#header div.site-name {
   font-size:18px;
+  font-weight: 200;
   letter-spacing:-1px;
-  color:#ace;
+  color:#e1f5fe;
   line-height:40px;
   margin:20px 0px;
   padding:0px 0px 0px 19px;
-  border-left:1px solid #258;
+  border-left:1px solid #039be5;
   }
 
 div#header form {
@@ -201,7 +196,7 @@ div#header form {
  */
 div#navigation {
   border-top:1px solid #258;
-  background:url(images/sprite.png) 0px -80px;
+  background:#039be5;
   }
 
 div#navigation div.breadcrumb {
@@ -216,22 +211,21 @@ div#navigation ul.links {
   }
 
   div#navigation ul.links a {
-    background:#147;
-    font-size:11px;
+    font-size:14px;
+    font-weight: 300;
     line-height:25px;
-    padding:5px 15px;
+    padding:5px 20px;
     margin-right:1px;
     }
 
   div#navigation ul.links a:hover {
-    background:#6ac;
-    color:#000;
+    color:#bbdefb;
     }
 
   div#navigation ul.links li.active a,
   div#navigation ul.links li a.active {
-    background:#e8e8e8;
-    color:#444;
+    color:#bbdefb;
+    border-bottom: 5px solid #bbdefb;
     }
 
 /**
@@ -239,7 +233,7 @@ div#navigation ul.links {
  */
 div#header-region {
   padding:20px 0px 0px;
-  background:#e8e8e8 url(images/grid_e8.png) 50% 0% repeat; }
+  background:#fff; }
 
 div#header-region h2.page-title {
   border:0px;
@@ -248,12 +242,12 @@ div#header-region h2.page-title {
 
   line-height:40px;
   font-size:32px;
-  font-weight:normal;
+  font-weight:200;
   }
 
   div#header-region h2.page-title span.label {
     font-size:13px;
-    font-weight:bold;
+    font-weight:normal;
     letter-spacing:0px;
 
     float:left;
@@ -293,7 +287,7 @@ div#header-region ul.tabs { clear:both; }
  * PAGE LAYOUT ========================================================
  */
 div#page {
-  background:#eee url(images/grid_e8.png) 50% 0% repeat;
+  background:#f5f5f5;
   padding-bottom:40px;
   }
 
@@ -456,7 +450,7 @@ div.krumo-root, div.krumo-root a {
 /**
  * FORMS ==============================================================
  */
-select,
+/*select,
 textarea,
 input.form-text {
   width:90%;
@@ -575,7 +569,7 @@ div.form-item div.description {
   font-size:11px;
   color:#666;
   }
-
+*/
 /* Fieldsets... what a nightmare */
 body.aegir fieldset {
   background:#f8f8f8;
@@ -589,25 +583,27 @@ body.aegir fieldset {
   -webkit-border-radius: 3px;
   }
 
-  body.aegir fieldset.collapsible {
-    position:relative;
-    padding:25px 0px 0px;
-    }
+body.aegir fieldset.collapsible {
+  position:relative;
+  padding:25px 0px 0px;
+}
 
-    body.aegir fieldset.collapsible div.fieldset-wrapper { padding:10px; }
+body.aegir fieldset.collapsible div.fieldset-wrapper { padding:10px; }
 
-  html.js body.aegir fieldset.collapsed {
-    height:0px;
-    margin:10px 0px;
-    background:transparent;
-    }
+html.js body.aegir fieldset.collapsed {
+  height:0px;
+  margin:10px 0px;
+  background:transparent;
+}
 
 body.aegir fieldset legend {
   font-size:11px;
   font-weight:bold;
   margin-bottom:-25px;
   }
-
+.collapsible-body {
+  background: #fff;
+}
   body.aegir fieldset.collapsible legend { margin:0px; }
 
 body.aegir fieldset.collapsible legend a,
@@ -679,7 +675,7 @@ div.node h2 {
     }
 
 div.node div.submitted {
-  color:#888;
+  color:#263238;
   margin:0px 0px 10px;
   font-size:11px;
   }
@@ -906,12 +902,13 @@ a.hosting-button-enabled,
 }
 
 a.hosting-button-enabled:hover {
-  background: #49a
+  background: #bbdefb;
 }
 
 a.hosting-button-enabled {
   color:#fff;
-  background:#6ac;
+  background:#009CE0;
+  text-transform: lowercase;
 }
 
 .hosting-button-disabled {
@@ -1041,3 +1038,31 @@ body.not-logged-in.page-user h2.title {
 .sticky-header{
   z-index: 1;
 }
+
+
+/**
+* Hosting Tasks overrides ================================================
+*/
+.aegir tr.hosting-processing .hosting-status {
+  background: url('../images/loading.gif');
+}
+.aegir tr.hosting-success, .aegir #hosting-package-comparison td.hosting-package-upgrade {
+  background: #e8f5e9 !important;
+  color: #002F7B !important;
+}
+.aegir tbody tr:first-of-type td {
+  border-top: none;
+}
+.aegir tbody tr td, .aegir thead tr th {
+  border-radius: 0;
+}
+.aegir thead tr th {
+  font-weight: 400;
+  border-top: none !important;
+}
+.aegir .table.hosting-table td {
+  border: none;
+}
+/*.aegir tr.hosting-success .hosting-status {
+  background-image: none;
+}*/

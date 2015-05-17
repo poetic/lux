@@ -1,5 +1,5 @@
 <div id="page-wrapper">
-  <div id="header" class='reverse'><div class='limiter clearfix'>
+  <div id="header" class='reverse nav-wrapper'><div class='limiter clearfix'>
       <?php if (isset($logo)): ?>
       <div class="logo">
         <a href="<?php print $front_page; ?>"><img src="<?php print $logo?>" /></a>
@@ -28,7 +28,7 @@
     <?php print render($title_suffix); ?>
   </div></div>
 
-  <div id='page'><div class='limiter clearfix'>
+  <div id='page' class='card'><div class='limiter clearfix'>
     <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
 
     <div id='main'>
