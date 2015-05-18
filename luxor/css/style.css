@@ -1038,7 +1038,12 @@ body.not-logged-in.page-user h2.title {
 .sticky-header{
   z-index: 1;
 }
-
+/**
+* Form Overrides ================================================
+*/
+body.page-admin div.form-item label, dl.multiselect div.form-item label, div.sidebar form div.form-item label, form div.form-item label.option, form#system-theme-settings div.form-item label, form div.form-item div.form-item label, form table div.form-item label, form div.container-inline div.form-item label, form div.form-checkboxes div.form-item label, form div.form-radios div.form-item label {
+  position: relative !important;
+}
 
 /**
 * Hosting Tasks overrides ================================================
@@ -1063,6 +1068,4 @@ body.not-logged-in.page-user h2.title {
 .aegir .table.hosting-table td {
   border: none;
 }
-/*.aegir tr.hosting-success .hosting-status {
-  background-image: none;
-}*/
+
