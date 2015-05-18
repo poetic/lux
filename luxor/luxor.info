@@ -8,17 +8,13 @@ base theme = lux
 ;; Regions
 ;;;;;;;;;;;;;;;;;;;;;
 
-regions[navigation]     = 'Navigation'
-regions[header]         = 'Top Bar'
-regions[highlighted]    = 'Highlighted'
-regions[help]           = 'Help'
-regions[content]        = 'Content'
-regions[sidebar_first]  = 'Primary'
-regions[sidebar_second] = 'Secondary'
-regions[footer]         = 'Footer'
-regions[page_top]       = 'Page top'
-regions[page_bottom]    = 'Page bottom'
-
+regions[sidebar_first] = Sidebar top
+regions[sidebar_second] = Sidebar bottom
+regions[content] = Content
+regions[content_bottom] = Content bottom
+regions[header] = Header
+regions[footer] = Footer
+regions[help] = Help
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Stylesheets
