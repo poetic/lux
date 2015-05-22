@@ -1,0 +1,32 @@
+name = Luxor
+description = A Lux Sub-theme for Aegir hostmaster.
+core = 7.x
+base theme = lux
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Regions
+;;;;;;;;;;;;;;;;;;;;;
+
+regions[sidebar_first] = Sidebar top
+regions[sidebar_second] = Sidebar bottom
+regions[content] = Content
+regions[content_bottom] = Content bottom
+regions[header] = Header
+regions[footer] = Footer
+regions[help] = Help
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Stylesheets
+;;;;;;;;;;;;;;;;;;;;;
+
+stylesheets[all][] = css/style.css
+stylesheets[all][] = css/materialize.min.css
+
+; ;;;;;;;;;;;;;;;;;;;;;
+; ;; Scripts
+; ;;;;;;;;;;;;;;;;;;;;;
+
+scripts[] = js/materialize.min.js
+scripts[] = js/luxor.settings.js
+

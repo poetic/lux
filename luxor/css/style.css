@@ -1,0 +1,1092 @@
+/* aegir specific styling from Eldir
+/**
+ * Eldir for Drupal 7
+ * Designed for the Aegir hosting system.
+ *
+ * By Young Hahn (young@developmentseed.org)
+ */
+
+/* Resets */
+body,
+
+table,
+table *,
+
+dl, dt, dd,
+
+ul.menu,
+ul.menu li,
+ul.menu li.leaf,
+ul.links,
+ul.links li,
+
+div.admin div.left,
+div.admin div.right,
+div.admin-panel,
+div.admin-panel div.body,
+div.admin-panel p.description,
+
+div.block ul,
+div.breadcrumb,
+div.item-list ul li,
+
+div.form-item,
+div.form-radios,
+div.form-checkboxes,
+div.form-radios div.form-item,
+div.form-checkboxes div.form-item,
+
+div.hosting-task-retry,
+
+h1, h2, h3, h4, h5, h6,
+ul, ol, li,
+p, blockquote {
+
+  background-image:none;
+  background-color:transparent;
+
+  margin:0px;
+  padding:0px;
+}
+
+ul, ol,
+.item-list ul, .item-list ol {
+  margin-left: 1em;
+}
+
+.block ul, .block ol, .block li {
+  list-style:none;
+  list-style-image:none;
+}
+
+html, body {
+  height: 100%;
+}
+
+body.aegir {
+  color:#444;
+  background:#fff;
+  margin:0px;
+  padding:0px;
+  min-width: 950px;
+  }
+
+a {
+  color:#468;
+  text-decoration:none;
+  font-weight: 300;
+  }
+
+  a:hover { text-decoration:underline; }
+
+  /* No underline for links that are likely to have good hover classes anyway. */
+  ul.menu li a:hover,
+  ul.links li a:hover { text-decoration:none; }
+
+  /* Reverse color text/links */
+  div.reverse { color:#fff; }
+  div.reverse a { color:#fff; }
+
+h1, h2 {
+  font-size:15px;
+  font-weight:bold;
+  padding:0px 0px 4px;
+  border-bottom:1px solid #e8e8e8;
+  }
+
+h3, h4, h5, h6 {
+  color:#888;
+  font-weight:bold;
+  margin:0px 0px 5px;
+  }
+
+dl,
+dd { margin:0px 0px 10px; }
+
+dt {
+  margin:10px 0px 0px;
+  font-weight:bold;
+  }
+
+p { margin:0px 0px 10px; }
+
+div.limiter {
+  width:940px;
+  margin:0px auto;
+  }
+
+ul.primary {
+    line-height: inherit;
+  }
+
+/**
+ * LINKS ==============================================================
+ */
+ul.primary,
+ul.primary li.active a,
+ul.secondary,
+ul.secondary li.active a,
+ul.tabs li,
+ul.tabs li a,
+ul.links li,
+ul.links li a {
+  background:transparent;
+  border:0px;
+  margin:0px;
+  padding:0px;
+  }
+
+ul.tabs li,
+ul.tabs li a,
+ul.links li,
+ul.links li a { float:left; }
+
+/**
+ * LISTS ==============================================================
+ */
+div.node div.content ul,
+div#console div.messages ul { padding-left:20px; }
+
+div.node div.content ul li,
+div#console div.messages ul li { list-style: square; }
+
+/**
+ * HEADER =============================================================
+ */
+div#header {
+  background:#0277bd;
+  }
+
+div#header div.logo,
+div#header div.logo a,
+div#header div.site-name { float:left; }
+
+.logo img {
+  width: 120px;
+  margin-right: 10px;
+  margin-top: 18px;
+}
+
+div#header div.site-name {
+  font-size:18px;
+  font-weight: 200;
+  letter-spacing:-1px;
+  color:#e1f5fe;
+  line-height:40px;
+  margin:20px 0px;
+  padding:0px 0px 0px 19px;
+  border-left:1px solid #039be5;
+  }
+
+div#header form {
+  width:370px;
+  height:40px;
+  line-height:40px;
+  padding:20px 0px;
+  float:right;
+  text-align:right;
+  }
+
+  div#header form * { vertical-align:middle; }
+
+  div#header form input.form-text { width:60%; }
+
+/**
+ * NAVIGATION =========================================================
+ */
+div#navigation {
+  border-top:1px solid #258;
+  background:#039be5;
+  }
+
+div#navigation div.breadcrumb {
+  line-height:40px;
+  font-size:11px;
+  float:left;
+  }
+
+div#navigation ul.links {
+  padding:5px 0px 0px;
+  float:right;
+  }
+
+  div#navigation ul.links a {
+    font-size:14px;
+    font-weight: 300;
+    line-height:25px;
+    padding:5px 20px;
+    margin-right:1px;
+    }
+
+  div#navigation ul.links a:hover {
+    color:#bbdefb;
+    }
+
+  div#navigation ul.links li.active a,
+  div#navigation ul.links li a.active {
+    color:#bbdefb;
+    border-bottom: 5px solid #bbdefb;
+    }
+
+/**
+ * HEADER REGION ======================================================
+ */
+div#header-region {
+  padding:20px 0px 0px;
+  background:#fff; }
+
+div#header-region h2.page-title {
+  border:0px;
+  padding:0px 0px 10px;
+  letter-spacing:-2px;
+
+  line-height:40px;
+  font-size:32px;
+  font-weight:200;
+  }
+
+  div#header-region h2.page-title span.label {
+    font-size:13px;
+    font-weight:normal;
+    letter-spacing:0px;
+
+    float:left;
+    margin:5px 10px 5px 0px;
+    padding:0px 10px;
+    line-height:30px;
+
+    background:#666;
+    color:#fff;
+    }
+
+#page ul.tabs,
+div#header-region ul.tabs { clear:both; }
+
+  div#header-region ul.tabs li { height:30px; }
+
+  #page ul.tabs li a,
+  div#header-region ul.tabs li a {
+    padding:5px 15px;
+    font-size:11px;
+    }
+
+  div#header-region ul.tabs li a:hover {
+    background:#666;
+    color:#fff;
+    }
+
+  div#header-region ul.tabs li.active a,
+  div#header-region ul.tabs li a.active {
+    padding: 5px 15px;
+    background:#fff;
+    color:#444;
+    border-bottom:1px solid #fff;
+    }
+
+/**
+ * PAGE LAYOUT ========================================================
+ */
+div#page {
+  background:#f5f5f5;
+  padding-bottom:40px;
+  }
+
+div#page div.limiter { background:url(images/page.png) repeat-y; }
+
+  body.wide div#page div.limiter {
+    padding-right:190px;
+    width:750px;
+    }
+
+div#main {
+  float:left;
+  width:600px;
+  padding:10px;
+  clear:both;
+  }
+
+  body.wide div#main {
+    background:#fff;
+    float:none;
+    width:950px;
+    }
+
+div.sidebar {
+  float:right;
+  width:300px;
+  padding:10px;
+  }
+
+#page ul.tabs {
+  height:29px;
+  border-bottom:1px solid #e8e8e8;
+  background:#fff;
+  }
+
+/**
+ * BLOCKS > SIDEBAR ===================================================
+ */
+div.sidebar div.block { margin:0px 0px 20px; }
+
+div.sidebar div.block div.content { padding:5px 0px 0px; }
+
+div.sidebar div.item-list { margin:0px 0px 10px; }
+
+div.sidebar ul.menu li,
+div.sidebar div.item-list li {
+  list-style:none;
+  font-size:11px;
+  padding:0px;
+  margin:0px 0px 5px;
+  background:#fff;
+  }
+
+  div.sidebar div.item-list li,
+  div.sidebar ul.menu a {
+    display:block;
+    padding:2px 10px;
+    }
+
+  div.sidebar ul.menu ul { padding-left:10px; }
+
+  div.sidebar ul.menu li li {
+    margin:0px;
+    border-top:1px solid #f0f0f0;
+    }
+
+  div.sidebar ul.menu a:hover {
+    color:#fff;
+    background:#6ac;
+    }
+
+  /* Corner rounding logic */
+  div.sidebar ul.menu li,
+  div.sidebar ul.menu a,
+  div.sidebar div.item-list li {
+    -moz-border-radius:3px;
+    -webkit-border-radius: 3px;
+    }
+
+  div.sidebar ul.menu li.expanded a {
+    -moz-border-radius:0px;
+    -moz-border-radius-topleft:3px;
+    -moz-border-radius-topright:3px;
+
+    -webkit-border-radius: 0px;
+    -webkit-border-top-left-radius:3px;
+    -webkit-border-top-right-radius:3px;
+    }
+
+    div.sidebar ul.menu li.expanded li,
+    div.sidebar ul.menu li.expanded li a {
+      -moz-border-radius:0px;
+      -webkit-border-radius: 0px;
+      }
+
+/**
+ * CONSOLE MESSAGES ===================================================
+ */
+div#console {
+  font-size:15px;
+  border-top:1px solid #111;
+  border-bottom:1px solid #fff;
+  padding:9px 0px;
+  background:#222 url(images/sprite.png) 0px -240px repeat-x;
+  }
+
+div#console div.messages {
+  color:#8cf;
+  text-shadow:0px 0px 15px #06c;
+  background:#024;
+
+  margin:5px 0px;
+  padding:9px;
+
+  border-style:solid;
+  border-color:#048;
+  border-width:1px 1px 1px 6px;
+  }
+
+  div#console div.error {
+    background-color:#400;
+    border-color:#800;
+    color:#fa4;
+    text-shadow:0px 0px 15px #c30;
+    }
+
+  div#console div.warning {
+    background-color:#630;
+    border-color:#a50;
+    color:#fe4;
+    text-shadow:0px 0px 15px #c80;
+    }
+
+  div#console div.ok {
+    background-color:#040;
+    border-color:#080;
+    color:#cfc;
+    text-shadow:0px 0px 15px #0c6;
+    }
+
+/* Exceptions */
+/* make sure devel module messages are readable */
+div.krumo-root, div.krumo-root a {
+  color: black;
+  text-shadow: none;
+}
+
+/**
+ * FOOTER =============================================================
+ */
+#footer {
+  background:#666;
+  padding:20px 0px;
+  line-height:40px;
+  height:40px;
+  }
+
+#footer ul.links { float:right; }
+
+/**
+ * FORMS ==============================================================
+ */
+/*select,
+textarea,
+input.form-text {
+  width:90%;
+  font: 13px/20px "Helvetica Neue",Arial,sans-serif;
+  padding:3px;
+  border:1px solid #ddd;
+  background-color:#fff;
+  }
+
+  select:focus,
+  textarea:focus,
+  input.form-text:focus {
+    background-color:#f0f8ff;
+    border-color:#abc;
+    }
+
+  div.reverse select,
+  div.reverse textarea,
+  div.reverse input.form-text {
+    background-color:#124;
+    color:#fff;
+    border-color:#258;
+    }
+
+  html.js input.form-autocomplete { background-position:100% 4px; }
+  html.js input.throbbing { background-position: 100% -16px; }
+
+  td select,
+  td input.form-text,
+  div.container-inline select,
+  div.container-inline input.form-text { width:auto; }
+
+input.form-submit {
+  font: bold 13px/20px "Helvetica Neue",Arial,sans-serif;
+  border:0px;
+  padding:5px 10px;
+  color:#fff;
+  background:#666;
+
+  cursor:pointer;
+
+  -moz-border-radius:3px;
+  -webkit-border-radius: 3px;
+  }
+
+
+input.form-submit[disabled] {
+  color:#ddd;
+  background:#eee;
+  cursor: default;
+}
+
+
+  body.page-admin input.form-submit,
+  body.page-admin #views-ajax-pad .form-submit {
+    padding: 0 4px;
+    }
+
+  div.reverse input.form-submit { background:#124; }
+
+form div.form-item {
+  clear:both;
+  position:relative;
+  margin:0px;
+  padding:10px 10px 9px;
+  border-bottom:1px solid #e8e8e8;
+  }
+
+  form div.form-item-labeled { padding-left:180px; }
+
+  form div.form-item-labeled label {
+    font-size:11px;
+    position:absolute;
+    left:0px;
+    width:170px;
+    }
+
+  /* Exceptions */
+  body.page-admin div.form-item,
+  dl.multiselect div.form-item,
+  div.sidebar form div.form-item,
+  form#system-theme-settings div.form-item,
+  form div.form-item div.form-item,
+  form table div.form-item,
+  form div.container-inline div.form-item,
+  form div.form-checkboxes div.form-item,
+  form div.form-radios div.form-item {
+    clear:none;
+    padding:0px;
+    border:0px;
+    }
+
+  body.page-admin div.form-item label,
+  dl.multiselect div.form-item label,
+  div.sidebar form div.form-item label,
+  form div.form-item label.option,
+  form#system-theme-settings div.form-item label,
+  form div.form-item div.form-item label,
+  form table div.form-item label,
+  form div.container-inline div.form-item label,
+  form div.form-checkboxes div.form-item label,
+  form div.form-radios div.form-item label {
+    width:auto;
+    position:static;
+    }
+
+div.form-item label.option,
+div.form-item label.option * {
+  font-size:1em;
+  vertical-align:middle;
+  }
+
+div.form-item div.description {
+  margin:5px 0px;
+  line-height:15px;
+  font-size:11px;
+  color:#666;
+  }
+*/
+/* Fieldsets... what a nightmare */
+body.aegir fieldset {
+  background:#f8f8f8;
+
+  margin:10px 0px;
+  padding:25px 10px 10px;
+  border:0px;
+
+  display:block;
+  -moz-border-radius:3px;
+  -webkit-border-radius: 3px;
+  }
+
+body.aegir fieldset.collapsible {
+  position:relative;
+  padding:25px 0px 0px;
+}
+
+body.aegir fieldset.collapsible div.fieldset-wrapper { padding:10px; }
+
+html.js body.aegir fieldset.collapsed {
+  height:0px;
+  margin:10px 0px;
+  background:transparent;
+}
+
+body.aegir fieldset legend {
+  font-size:11px;
+  font-weight:bold;
+  margin-bottom:-25px;
+  }
+.collapsible-body {
+  background: #fff;
+}
+  body.aegir fieldset.collapsible legend { margin:0px; }
+
+body.aegir fieldset.collapsible legend a,
+html.js body.aegir fieldset.collapsible legend a {
+  position:absolute;
+  right:0px;
+  left:0px;
+
+  background:#eee;
+  font-size:11px;
+
+  display:block;
+  padding:2px 10px 3px;
+  }
+
+body.aegir fieldset.collapsible legend a {
+  -moz-border-radius-topleft:3px;
+  -moz-border-radius-topright:3px;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  }
+
+  body.aegir fieldset.collapsed legend a {
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    }
+
+/**
+ * NODES ==============================================================
+ */
+div.node {
+  margin:0px 0px 10px;
+  padding:0px 0px 9px;
+  border-bottom:1px solid #e8e8e8;
+  }
+
+div.sticky {
+  padding:4px 4px 9px;
+  border:1px solid #e0e6e8;
+  background:#f0f6f8;
+  }
+
+  /* Cancel out all the particulars for full node pages */
+  body.node-page div.node {
+    background:transparent;
+    border:0px;
+    padding:0px;
+    margin:0px;
+    }
+
+div.node h2 {
+  border:0px;
+  font-size:24px;
+  line-height:30px;
+  font-weight:normal;
+  }
+
+  div.node h2 span.label {
+    float:left;
+    font-size:9px;
+    font-weight:bold;
+    line-height:20px;
+
+    margin:5px 10px 0px 0px;
+    padding:0px 5px;
+
+    background:#666;
+    color:#fff;
+    }
+
+div.node div.submitted {
+  color:#263238;
+  margin:0px 0px 10px;
+  font-size:11px;
+  }
+
+  body.node-page div.node div.submitted {
+    border-bottom:1px solid #e8e8e8;
+    padding:0px 0px 9px;
+    }
+
+div.node ul.links {
+  float:right;
+  font-size:11px;
+  }
+
+  div.node ul.links li a {
+    border-right:1px solid #e8e8e8;
+    padding:0px 10px;
+    }
+
+  div.node ul.links li.last a {
+    border:0px;
+    padding-right:0px;
+    }
+
+/**
+ * AEGIR-SPECIFIC =====================================================
+ */
+div#hosting-wizard-form,
+div.error,
+div.message { width:auto; }
+
+#hosting-task-log { clear:both; }
+
+table,
+table.hosting-table {
+  font-size:11px;
+  width:100%;
+  }
+
+table,
+table tr,
+table td,
+table th,
+table thead,
+table body,
+table.hosting-table,
+table.hosting-table tr,
+table.hosting-table td,
+table.hosting-table th,
+table.hosting-table thead,
+table.hosting-table tbody {
+  border:0px;
+  padding:0px;
+  }
+
+table th,
+table td,
+table.hosting-table th,
+table.hosting-table td {
+  padding:4px 5px 5px;
+  border-top:1px solid #fff;
+  }
+
+.modalframe .ui-dialog-titlebar,
+table th,
+table.hosting-table th {
+  font-size:11px;
+  background:#666 !important;
+  }
+
+ table th.active,
+ table.hosting-table th.active { background:#555 !important; }
+
+ table th,
+ table th a { color:#fff; }
+
+ table tr.even td { background-color:#fcfcfc; }
+ table tr.odd td { background-color:#f8f8f8; }
+
+#hosting-wizard-account-details,
+#hosting-wizard-account-passwd {
+  float:none;
+  width:auto;
+  padding:0px;
+  }
+
+/* Node info */
+#hosting-task-list {
+  width:290px;
+  float:right;
+}
+
+#hosting-server-info,
+#hosting-platform-info,
+#hosting-package-info,
+#hosting-site-info,
+#hosting-task-info,
+#hosting-site-edit-info {
+  font-size:11px;
+  background:#f8f8f8;
+  float:left;
+  padding:9px;
+  border:1px solid #e8e8e8;
+  margin:0px 0px 10px;
+  width:280px;
+  }
+
+table.views-table { clear: both }
+
+  #hosting-site-edit-info,
+  #hosting-site-edit-info div.form-item {
+    float:none;
+    width:auto;
+    }
+
+  #hosting-site-edit-info div.form-item,
+  body.ntype-task #page div.node div#hosting-task-info div.form-item,
+  body.aegir #page div.node div.content div.form-item {
+    float:none;
+    position:relative;
+    margin:0px;
+    padding:5px 5px 4px 100px;
+    border-bottom:1px solid #e8e8e8;
+    }
+
+    #hosting-site-edit-info div.form-item:last-child,
+    body.ntype-task #page div.node div#hosting-task-info div.form-item:last-child,
+    body.aegir #page div.node div.content div.form-item:last-child {
+      border:0px;
+      padding-bottom:5px;
+      }
+
+  body.aegir #page div.node div.content div.form-item label {
+    position:absolute;
+    left:0px;
+    width:95px;
+    white-space:nowrap;
+    overflow:hidden;
+    font-size:9px;
+    display:block;
+    }
+
+  /* Exceptions */
+  body.ntype-task #page div.node div.content div.form-item, /* This exception sucks */
+  body.aegir #page #hosting-site-list div.form-item,
+  body.aegir #page #hosting-task-list div.form-item {
+    position:static;
+    float:none;
+    display:block;
+    margin:0px;
+    padding:0px;
+    }
+
+/* Forms */
+.hosting-queue-frequency,
+.hosting-queue-frequency-head {
+  text-align:left;
+  padding-right:inherit;
+  }
+
+div.hosting-queue-frequency {
+  font-size:10px;
+  text-align:left;
+  white-space:nowrap;
+  }
+
+div.hosting-queue-frequency input,
+div.hosting-queue-frequency select {
+  padding:2px;
+  font-size:10px;
+  }
+
+#edit-tasks-frequency-items-wrapper {
+    float: left;
+    margin: 0 0 5px 0;
+}
+
+#edit-cron-frequency-ticks-wrapper input,
+#edit-tasks-frequency-items-wrapper input,
+#edit-tasks-frequency-ticks-wrapper input {
+    width: 3em;
+    margin: 0 5px 0 0;
+}
+
+#edit-cron-frequency-ticks-wrapper {
+    float: left;
+}
+
+#edit-tasks-frequency-ticks-wrapper {
+    float: left;
+    clear: both;
+}
+
+#edit-tasks-frequency-unit-wrapper,
+#edit-cron-frequency-unit-wrapper {
+    float: left;
+}
+
+/* Keep labels from being truncated */
+body.aegir #page div.node div.content div.form-item label {
+  width: auto;
+}
+
+body.aegir #page div.node div.content div.form-radios div.form-item,
+body.aegir #page div.node div.content div.form-checkboxes div.form-item,
+body.aegir #page div.node div.content div.form-option {
+  border-bottom: none;
+  padding-bottom: 1.5em;
+}
+
+/* Task buttons */
+a.hosting-button-enabled,
+.hosting-button-disabled {
+  margin: 0 4px;
+  text-align: center;
+  height: 20px;
+  width : 4em;
+
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+
+  -moz-border-radius:3px;
+  -webkit-border-radius: 3px;
+}
+
+a.hosting-button-enabled:hover {
+  background: #bbdefb;
+}
+
+a.hosting-button-enabled {
+  color:#fff;
+  background:#009CE0;
+}
+
+.hosting-button-disabled {
+  color:#eee;
+  background:#aaa;
+}
+
+a.hosting-button-stop {
+  background-color:#e66;
+}
+
+a.hosting-button-stop:hover {
+  background-color:#c44;
+}
+/**
+ * CORE ADMIN =========================================================
+ */
+body.path-node-add dt,
+dl.admin-list dt,
+div.admin-panel h3 { font-size:18px; }
+
+body.path-node-add dd,
+dl.admin-list dd {
+  padding-bottom:9px;
+  border-bottom:1px solid #e8e8e8;
+  }
+
+div.admin-panel {
+  border:1px solid #e8e8e8;
+  padding:9px;
+  margin:10px 0px;
+  background:#f8f8f8;
+  }
+
+  div.admin-panel dl.admin-list dt { font-size:13px; }
+
+/* Split screens */
+div.admin .right,
+div.admin .left {
+  padding:0px;
+  width:265px;
+  }
+
+/* Put some space between multiselect options. See admin/content/node */
+dl.multiselect div.form-item { margin:0px 0px 10px; }
+
+/* Override Garland-specific styling for the available updates table */
+.update table.version .version-links ul {
+  float: right;
+}
+
+.update table.version .version-links ul li {
+  float: none;
+  padding-left: 1em;
+}
+
+.update table.version .version-links ul li a {
+  float: none;
+}
+
+/**
+ * ERROR PAGES ========================================================
+ */
+body.error-page div.page-content {
+  border:1px solid #e8e8e8;
+  background:#f8f8f8;
+  padding:19px;
+  font-size:18px;
+  text-align:center;
+  }
+
+/* Modal frame */
+
+.modalframe {
+  color: #000000;
+  background-color: #ffffff;
+  border: 2px solid black;
+}
+
+.modalframe .ui-dialog-titlebar {
+  border : 1px solid black;
+
+}
+
+
+/**
+ * Login forms
+ */
+body.not-logged-in.page-user {
+  background: #16527f;
+  background: linear-gradient(#16527f, #151f3e);
+  min-height: 100%;
+  min-width: 350px;
+}
+body.not-logged-in.page-user div.form-item {
+  padding: 10px 0;
+  border: none;
+}
+body.not-logged-in.page-user h2.title {
+  display: none;
+}
+#auth_box #the_logo {
+  border: none;
+}
+#auth_box #middle_part {
+  border-radius: 10px;
+  box-shadow: 0 0 15px 3px rgba(0, 0, 0, .25);
+}
+
+
+/**
+ * Permissions table ==================================================
+ */
+#user-admin-perm table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+#user-admin-perm th {
+  width: 100%;
+}
+
+#user-admin-perm th:first-of-type {
+  width: 170px;
+}
+
+.sticky-header{
+  z-index: 1;
+}
+/**
+* Form Overrides ================================================
+*/
+body.page-admin div.form-item label, dl.multiselect div.form-item label, div.sidebar form div.form-item label, form div.form-item label.option, form#system-theme-settings div.form-item label, form div.form-item div.form-item label, form table div.form-item label, form div.container-inline div.form-item label, form div.form-checkboxes div.form-item label, form div.form-radios div.form-item label {
+  position: relative !important;
+}
+
+/**
+* Hosting Tasks overrides ================================================
+*/
+.aegir tr.hosting-processing .hosting-status {
+  background: url('../images/loading.gif');
+  background-size: 14%;
+}
+.aegir tr.hosting-success, .aegir #hosting-package-comparison td.hosting-package-upgrade {
+  background: #e8f5e9 !important;
+  color: #002F7B !important;
+}
+.aegir tr.hosting-warning, .aegir #hosting-package-comparison td.hosting-package-missing {
+  background: #ffff8d !important;
+}
+.aegir tbody tr:first-of-type td {
+  border-top: none;
+}
+.aegir tbody tr td, .aegir thead tr th {
+  border-radius: 0;
+}
+.aegir thead tr th {
+  font-weight: 400;
+  border-top: none !important;
+}
+.aegir .table.hosting-table td {
+  border: none;
+}
+/*Pure table overrides*/
+.aegir table thead th {
+  background-color: #546e7a !important;
+}
+/*Aegir Specific Views*/
+#views-form-hosting-site-list-page-sites .collapsible-body {
+  width: 100%;
+}
+#views-form-hosting-site-list-page-sites .btn[value='Execute'] {
+  float: right;
+}
+.form-item-operation div.select-wrapper {
+  display: inline-block;
+}
+.form-item-operation div.select-wrapper i {
+  top: 5px;
+  right: -20px;
+}
+
