@@ -908,7 +908,6 @@ a.hosting-button-enabled:hover {
 a.hosting-button-enabled {
   color:#fff;
   background:#009CE0;
-  text-transform: lowercase;
 }
 
 .hosting-button-disabled {
@@ -1050,10 +1049,14 @@ body.page-admin div.form-item label, dl.multiselect div.form-item label, div.sid
 */
 .aegir tr.hosting-processing .hosting-status {
   background: url('../images/loading.gif');
+  background-size: 14%;
 }
 .aegir tr.hosting-success, .aegir #hosting-package-comparison td.hosting-package-upgrade {
   background: #e8f5e9 !important;
   color: #002F7B !important;
+}
+.aegir tr.hosting-warning, .aegir #hosting-package-comparison td.hosting-package-missing {
+  background: #ffff8d !important;
 }
 .aegir tbody tr:first-of-type td {
   border-top: none;
@@ -1067,5 +1070,23 @@ body.page-admin div.form-item label, dl.multiselect div.form-item label, div.sid
 }
 .aegir .table.hosting-table td {
   border: none;
+}
+/*Pure table overrides*/
+.aegir table thead th {
+  background-color: #546e7a !important;
+}
+/*Aegir Specific Views*/
+#views-form-hosting-site-list-page-sites .collapsible-body {
+  width: 100%;
+}
+#views-form-hosting-site-list-page-sites .btn[value='Execute'] {
+  float: right;
+}
+.form-item-operation div.select-wrapper {
+  display: inline-block;
+}
+.form-item-operation div.select-wrapper i {
+  top: 5px;
+  right: -20px;
 }
 
