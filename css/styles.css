@@ -20,6 +20,9 @@ form select {
 .nav-section {
   display: inline;
 }
+.clearfix.right {
+  clear: right;
+}
 /* Prefix/Suffix CSS overrides */
 form input {
   width: auto !important;
@@ -142,5 +145,8 @@ a.feed-icon {
 .alert a {
   color: #bbdefb;
 }
-
+/*Admin specific overrides*/
+.admin-panel.card {
+  margin: 30px 0;
+}
 

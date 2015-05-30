@@ -239,3 +239,72 @@ function lux_fieldset($variables) {
   // $output .= '</ul>';
   return $output;
 }
+
+/**
+ * Implements theme_admin_block().
+ * Adding classes to the administration blocks see issue #1869690.
+ */
+function lux_admin_block($variables) {
+  $block = $variables['block'];
+  $output = '';
+
+  // Don't display the block if it has no content to display.
+  if (empty($block['show'])) {
+    return $output;
+  }
+
+  if (!empty($block['path'])) {
+    $output .= '<div class="admin-panel card grey lighten-5 ' . check_plain(str_replace("/", " ", $block['path'])) . ' ">';
+  }
+  elseif (!empty($block['title'])) {
+    $output .= '<div class="admin-panel ' . check_plain(strtolower($block['title'])) . '">';
+  }
+  else {
+    $output .= '<div class="admin-panel">';
+  }
+
+  if (!empty($block['title'])) {
+    $output .= '<h3 class="title">' . $block['title'] . '</h3>';
+  }
+
+  if (!empty($block['content'])) {
+    $output .= '<div class="body">' . $block['content'] . '</div>';
+  }
+  else {
+    $output .= '<div class="description">' . $block['description'] . '</div>';
+  }
+
+  $output .= '</div>';
+
+  return $output;
+
+}
+
+/**
+ * Implements theme_admin_block_content().
+ * Adding classes to the administration blocks see issue #1869690.
+ */
+function lux_admin_block_content($variables) {
+  $content = $variables['content'];
+  $output = '';
+
+  if (!empty($content)) {
+    $class = 'admin-list';
+    if ($compact = system_admin_compact_mode()) {
+      $class .= ' compact';
+    }
+    $output .= '<dl class="' . $class . '">';
+    foreach ($content as $item) {
+      if (!isset($item['path'])) {
+          $item['path']='';
+      }
+      $output .= '<div class="admin-block-item ' . check_plain(str_replace("/", "-", $item['path'])) . '"><dt>' . l($item['title'], $item['href'], $item['localized_options']) . '</dt>';
+      if (!$compact && isset($item['description'])) {
+        $output .= '<dd class="description">' . filter_xss_admin($item['description']) . '</dd>';
+      }
+      $output .= '</div>';
+    }
+    $output .= '</dl>';
+  }
+  return $output;
+}
