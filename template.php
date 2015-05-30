@@ -254,7 +254,7 @@ function lux_admin_block($variables) {
   }
 
   if (!empty($block['path'])) {
-    $output .= '<div class="admin-panel card grey lighten-5 ' . check_plain(str_replace("/", " ", $block['path'])) . ' ">';
+    $output .= '<div class="admin-panel card white ' . check_plain(str_replace("/", " ", $block['path'])) . ' ">';
   }
   elseif (!empty($block['title'])) {
     $output .= '<div class="admin-panel ' . check_plain(strtolower($block['title'])) . '">';

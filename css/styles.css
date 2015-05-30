@@ -146,7 +146,31 @@ a.feed-icon {
   color: #bbdefb;
 }
 /*Admin specific overrides*/
+div.admin .left {
+  margin-left: 0;
+}
 .admin-panel.card {
   margin: 30px 0;
+  padding: 15px 120px 45px 15px;
+  background-size: 75px;
+  background-position: 96% 15px;
+  background-repeat: no-repeat;
 }
-
+.admin-panel.card.people {
+  background-image: url('../images/config/people.png');
+}
+.admin-panel.card.content {
+  background-image: url('../images/config/content.png');
+}
+.admin-panel.card.system {
+  background-image: url('../images/config/system.png');
+}
+.admin-panel.card.user-interface {
+  background-image: url('../images/config/user-interface.png');
+}
+.admin-panel.card .title, div.admin-panel .description {
+  font-weight: 300;
+}
+.admin-panel dt a {
+  font-weight: 400;
+} 
