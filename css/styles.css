@@ -162,11 +162,29 @@ div.admin .left {
 .admin-panel.card.content {
   background-image: url('../images/config/content.png');
 }
+.admin-panel.card.media {
+  background-image: url('../images/config/media.png');
+}
+.admin-panel.card.search {
+  background-image: url('../images/config/search.png');
+}
 .admin-panel.card.system {
   background-image: url('../images/config/system.png');
 }
 .admin-panel.card.user-interface {
   background-image: url('../images/config/user-interface.png');
+}
+.admin-panel.card.development {
+  background-image: url('../images/config/development.png');
+}
+.admin-panel.card.services {
+  background-image: url('../images/config/services.png');
+}
+.admin-panel.card.regional {
+  background-image: url('../images/config/regional.png');
+}
+.admin-panel.card.administration {
+  background-image: url('../images/config/administration.png');
 }
 .admin-panel.card .title, div.admin-panel .description {
   font-weight: 300;
