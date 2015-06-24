@@ -1,14 +1,11 @@
-/* Overrides */
+/* Typography */
+h1, h3, h5 {
+  font-weight: 300;
+}
+h2, h4, h6, p {
+  font-weight: 400;
+}
 
-.btn {
-  margin: 0 10px 0 0;
-}
-form select {
-  display: none;
-}
-.select-dropdown.dropdown-content li>a, .select-dropdown.dropdown-content li>span {
-  font-size: 12px;
-}
 /* Nav elements overrides */
 #logo img {
   vertical-align: middle;
@@ -22,6 +19,16 @@ form select {
 }
 .clearfix.right {
   clear: right;
+}
+/* Components */
+.btn {
+  margin: 0 10px 0 0;
+}
+form select {
+  display: none;
+}
+.select-dropdown.dropdown-content li>a, .select-dropdown.dropdown-content li>span {
+  font-size: 12px;
 }
 /* Prefix/Suffix CSS overrides */
 form input {
