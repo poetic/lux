@@ -93,7 +93,11 @@ table th, table td {
   width: 32px;
   height: 32px;
 }
-
+.page-admin-people-permissions input[type="checkbox"]:not(:checked), 
+.page-admin-people-permissions input[type="checkbox"]:checked {
+  position: relative
+  left: 0;
+}
 /* Node Edit Tabs Overrides */
 .tabs.primary,
 .tabs.secondary {
